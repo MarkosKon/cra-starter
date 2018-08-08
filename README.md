@@ -1,10 +1,11 @@
-#CRA Starter
+# CRA Starter
 
 > A starter project bootstrapped with [create-react-app](https://github.com/facebook/create-react-app) that helps you start quickly a simple static site. [Live demo](https://cra-starter.netlify.com/).
 
 ### Usage
 
 `git clone https://github.com/MarkosKon/cra-starter.git`
+
 `cd cra-starter && npm install && npm start`
 
 ### Dependencies
