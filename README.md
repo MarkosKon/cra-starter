@@ -6,7 +6,11 @@
 
 `git clone https://github.com/MarkosKon/cra-starter.git`
 
-`cd cra-starter && npm install && npm start`
+`cd cra-starter` 
+
+`open favourite editor`
+
+`npm install && npm start`
 
 ### Dependencies
 
