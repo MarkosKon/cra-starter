@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import ProgressBar from "already-styled-components";
+import { Button, ProgressBar } from "already-styled-components";
 
 const ErrorBackground = styled.div`
   background-color: black;
@@ -9,9 +9,9 @@ const ErrorBackground = styled.div`
   color: white;
   opacity: 0.7;
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   display: flex;
   align-items: center;
@@ -30,13 +30,9 @@ const Loading = props => {
       <ErrorBackground>
         <div>
           <div>Oops! Something went wrong..</div>
-          <button
-            type="button"
-            className="btn btn-success mt-3"
-            onClick={props.retry}
-          >
+          <Button color="white" bgColor="green" onClick={props.retry}>
             Retry
-          </button>
+          </Button>
         </div>
       </ErrorBackground>
     );

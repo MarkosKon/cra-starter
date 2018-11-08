@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { Button } from "already-styled-components";
 
 import Layout from "../layouts/Layout";
 import PageTitle from "../components/PageTitle";
-import Button from "../components/Button";
 
 const HeroContainer = styled.div`
   width: 50%;
