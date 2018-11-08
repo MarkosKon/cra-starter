@@ -1,11 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
+import Loadable from "react-loadable";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import Loading from "./components/Loading";
+
+const LoadableHome = Loadable({
+  loader: () => import("./pages/Home"),
+  loading: Loading
+});
+const LoadableAbout = Loadable({
+  loader: () => import("./pages/About"),
+  loading: Loading
+});
+const LoadableContact = Loadable({
+  loader: () => import("./pages/Contact"),
+  loading: Loading
+});
+const LoadableNotFound = Loadable({
+  loader: () => import("./pages/NotFound"),
+  loading: Loading
+});
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Inconsolata');
@@ -34,10 +49,10 @@ class App extends React.Component {
         <GlobalStyle />
         <Router>
           <Switch>
-            <Route exact path="/" render={() => <Home />} />
-            <Route path="/about" render={() => <About />} />
-            <Route path="/contact" render={() => <Contact />} />
-            <Route render={() => <NotFound />} />
+            <Route exact path="/" render={() => <LoadableHome />} />
+            <Route path="/about" render={() => <LoadableAbout />} />
+            <Route path="/contact" render={() => <LoadableContact />} />
+            <Route render={() => <LoadableNotFound />} />
           </Switch>
         </Router>
       </>
