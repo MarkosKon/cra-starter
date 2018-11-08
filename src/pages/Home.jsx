@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
+import Layout from "../layouts/Layout";
 import PageTitle from "../components/PageTitle";
 import Button from "../components/Button";
-import Layout from "../layouts/Layout";
-// import { Button } from 'reactstrap';
 
 const HeroContainer = styled.div`
   width: 50%;
@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
     font-size: 20px;
   }
 `;
-export default () => (
+const Home = () => (
   <Layout title={"CRA Boilerplate"}>
     <HeroContainer>
       <PageTitle fontSize="80px">Home Page</PageTitle>
@@ -29,3 +29,5 @@ export default () => (
     </HeroContainer>
   </Layout>
 );
+
+export default Home;

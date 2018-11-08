@@ -1,8 +1,9 @@
 import React from "react";
+
 import PageTitle from "../components/PageTitle";
 import Layout from "../layouts/Layout";
 
-export default () => (
+const About = () => (
   <Layout title={"CRA Boilerplate | About"}>
     <PageTitle>About page</PageTitle>
     <p>
@@ -28,3 +29,5 @@ export default () => (
     </p>
   </Layout>
 );
+
+export default About;
