@@ -1,8 +1,9 @@
 import React from "react";
 import PageTitle from "../components/PageTitle";
+import Layout from "../layouts/Layout";
 
 export default () => (
-  <div>
+  <Layout title={"CRA Boilerplate | About"}>
     <PageTitle>About page</PageTitle>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur enim
@@ -25,5 +26,5 @@ export default () => (
       doloremque atque! Commodi alias perspiciatis fuga dolore magnam porro
       totam iste.
     </p>
-  </div>
+  </Layout>
 );

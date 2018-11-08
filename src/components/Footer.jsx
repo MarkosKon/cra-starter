@@ -21,7 +21,7 @@ const FooterContainer = styled.div`
   }
 `;
 
-export default () => (
+const Footer = () => (
   <FooterContainer>
     <p>
       <a href="https://github.com/MarkosKon/cra-starter">Source code</a> on
@@ -48,3 +48,5 @@ export default () => (
     </div>
   </FooterContainer>
 );
+
+export default Footer;

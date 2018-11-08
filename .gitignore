@@ -23,3 +23,6 @@ yarn-error.log*
 # deploy
 .netlify
 _redirects
+
+TODO.md
+.vscode

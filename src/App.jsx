@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import Layout from "./layouts/Layout";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -26,49 +26,19 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inconsolata', monospace;
   }
 `;
-// Un-comment parent Layout and remove Layout from Route render prop if you don't want animations.
-class App extends Component {
+
+class App extends React.Component {
   render() {
     return (
       <>
         <GlobalStyle />
         <Router>
-          {/* <Layout>  */}
           <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Layout key="/" title="CRA Stater">
-                  <Home />
-                </Layout>
-              )}
-            />
-            <Route
-              path="/about"
-              render={() => (
-                <Layout key="/about" title="About | CRA Stater">
-                  <About />
-                </Layout>
-              )}
-            />
-            <Route
-              path="/contact"
-              render={() => (
-                <Layout key="/contact" title="Contact | CRA Stater">
-                  <Contact />
-                </Layout>
-              )}
-            />
-            <Route
-              render={() => (
-                <Layout key="/notfound" title="Page not found">
-                  <NotFound />
-                </Layout>
-              )}
-            />
+            <Route exact path="/" render={() => <Home />} />
+            <Route path="/about" render={() => <About />} />
+            <Route path="/contact" render={() => <Contact />} />
+            <Route render={() => <NotFound />} />
           </Switch>
-          {/* </Layout> */}
         </Router>
       </>
     );

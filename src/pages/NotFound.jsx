@@ -1,8 +1,9 @@
 import React from "react";
 import PageTitle from "../components/PageTitle";
+import Layout from "../layouts/Layout";
 
 export default () => (
-  <div>
+  <Layout title={"CRA Boilerplate | Page not found"}>
     <PageTitle>Page not found...</PageTitle>
-  </div>
+  </Layout>
 );

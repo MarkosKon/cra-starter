@@ -1,24 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import PropTypes from "prop-types";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import animations from "../utils/animations"
+import animations from "../utils/animations";
 
 const Content = styled.div`
   padding: 30px 50px 150px;
   width: 80%;
   margin: auto;
-  animation: ${animations.fadeIn} .4s linear;
-  @media screen and (max-width: 600px){
+  animation: ${animations.fadeIn} 0.4s linear;
+  @media screen and (max-width: 600px) {
     width: auto;
-    padding: 30px 15px 200px
+    padding: 30px 15px 200px;
   }
 `;
 
 const Layout = ({ title, children }) => (
-  <React.Fragment>
+  <>
     <Helmet>
       <title>{title}</title>
       <meta
@@ -53,7 +54,7 @@ const Layout = ({ title, children }) => (
     <Navbar />
     <Content>{children}</Content>
     <Footer />
-  </React.Fragment>
+  </>
 );
 
 Layout.propTypes = {
