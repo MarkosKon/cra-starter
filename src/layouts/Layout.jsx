@@ -75,18 +75,10 @@ const Layout = ({ title, children }) => (
         </Brand>
       }
     >
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact</Link>
-      </li>
-      <li>
-        <Link to="/sfsadfas">Invalid page</Link>
-      </li>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/sfsadfas">Invalid page</Link>
     </Navbar>
     <Content>{children}</Content>
     <Footer />

@@ -30,7 +30,7 @@ const Loading = props => {
       <ErrorBackground>
         <div>
           <div>Oops! Something went wrong..</div>
-          <Button color="white" bgColor="green" onClick={props.retry}>
+          <Button c="white" bc="green" onClick={props.retry}>
             Retry
           </Button>
         </div>
